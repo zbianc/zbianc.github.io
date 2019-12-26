@@ -67,6 +67,7 @@ gitalk:
   repo: zbianc.github.io    #仓库名称
   owner: zbianc    #github用户名
   admin: zbianc
+  id: 'window.location.pathname'
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
