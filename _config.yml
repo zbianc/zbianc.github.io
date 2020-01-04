@@ -100,7 +100,7 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "跨介质飞行力学实验室",
+        title: "跨介质航行力学实验室",
         href: "http://www.sd402.com"
     },{
         title: "东岳流体",
