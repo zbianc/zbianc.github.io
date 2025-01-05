@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>雪柳漫天</title>
+    <link>https://zbianc.github.io/tags/star-ccm&#43;/</link>
+    <description></description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 </copyright>
+    <lastBuildDate>Sun, 05 Jan 2025 14:25:04 +0800</lastBuildDate><atom:link href="https://zbianc.github.io/tags/star-ccm+/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【STAR-CCM&#43;】入水：重叠网格</title>
+      <link>https://zbianc.github.io/blogs/star-ccm&#43;/ccmblog1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zbianc.github.io/blogs/star-ccm&#43;/ccmblog1/</guid>
+      <description>由于RSS阅读器无法完美地展示博客内容，建议到浏览器阅读。<br/>
+
+&lt;h2 class=&#34;relative group&#34;&gt;1. 准备工作 
+    &lt;div id=&#34;1-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#1-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;1.1  建立三维模型 
+    &lt;div id=&#34;11--%E5%BB%BA%E7%AB%8B%E4%B8%89%E7%BB%B4%E6%A8%A1%E5%9E%8B&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#11--%E5%BB%BA%E7%AB%8B%E4%B8%89%E7%BB%B4%E6%A8%A1%E5%9E%8B&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;本案例选择使用三维软件建立如下图所示的三维模型，尺寸我是随便设置的。将文件另存为parasolid格式1.x_t。&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb1_hu10496665781531414790.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb1_hu4015330989555865412.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb1_hu7782970834438041467.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb1_hu14950942772870275375.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb1_hu4015330989555865412.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;1.2  质量属性 
+    &lt;div id=&#34;12--%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#12--%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;质量属性如下图所示：&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb2_hu12897792951134898587.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb2_hu3297633414744237813.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb2_hu4167202162470145127.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb2_hu12758269057246697332.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb2_hu3297633414744237813.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;2. 模型设置 
+    &lt;div id=&#34;2-%E6%A8%A1%E5%9E%8B%E8%AE%BE%E7%BD%AE&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#2-%E6%A8%A1%E5%9E%8B%E8%AE%BE%E7%BD%AE&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;2.1  导入模型 
+    &lt;div id=&#34;21--%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9E%8B&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#21--%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9E%8B&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;点击桌面的STAR-CCM+图标，选择菜单：文件→新建模拟，新弹出创建新模拟对话框，保持默认设置，点击确定。&lt;/p&gt;
+&lt;p&gt;展开左侧的树状图中的：几何→3D-CAD模型→（右键）新建，进入3D-CAD界面。&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb3_hu8555232307817081047.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb3_hu16976667658659901044.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb3_hu12487154583951335182.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb3_hu8066805236427406646.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb3_hu16976667658659901044.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+&lt;p&gt;右键左侧树状图中的3D-CAD Model 1，选择：导入→CAD模型，弹出选择文件对话框，选择我们之前建好的1.x_t文件，点击打开。&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb4_hu13355852690843746579.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb4_hu3935041960170138894.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb4_hu17591680818054519819.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb4_hu5582577816643361669.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb4_hu3935041960170138894.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;2.2  平移 
+    &lt;div id=&#34;22--%E5%B9%B3%E7%A7%BB&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#22--%E5%B9%B3%E7%A7%BB&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;展开左侧树状图中的：体→Body 1→（右键）转换→平移，弹出平移设置。其余保持默认，在平移矢量栏的X中填写-0.187356m，重心坐标在之前的质量属性图中已给出。将原点平移至重心，点击确定。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb5_hu12981810247315834404.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb5_hu1247522922137433279.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb5_hu17612301120577708111.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb5_hu17826669141638841730.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb5_hu1247522922137433279.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb6_hu9875356244992163979.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb6_hu14952156097744149459.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb6_hu5711390635659366437.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb6_hu13716654540520372691.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb6_hu14952156097744149459.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;&lt;/p&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;2.3  保存默认视图 
+    &lt;div id=&#34;23--%E4%BF%9D%E5%AD%98%E9%BB%98%E8%AE%A4%E8%A7%86%E5%9B%BE&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#23--%E4%BF%9D%E5%AD%98%E9%BB%98%E8%AE%A4%E8%A7%86%E5%9B%BE&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;按住鼠标右键可以拖动弹体至合适位置，按住鼠标左键可以调整弹体视角，鼠标中键可以放大缩小视图。按图中所示操作可以调整弹体坐标系至合适位置，点击下图左侧的蓝框的重置视图按钮可以将弹体放置在屏幕合适位置，再次点击下图红框所示按钮保存视图。&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb7_hu14195678399868466961.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb7_hu13108686352239023929.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb7_hu14741105097156162779.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb7_hu6320395753491755033.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb7_hu13108686352239023929.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;2.4  旋转 
+    &lt;div id=&#34;24--%E6%97%8B%E8%BD%AC&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#24--%E6%97%8B%E8%BD%AC&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;展开左侧树状图中的：体→Body 1→（右键）转换→旋转，在旋转体编辑框中改变旋转角度为180.0deg，其余设置不变，旋转弹体至合适位置，点击确定。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb8_hu18117542730543952014.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb8_hu15553813195175815651.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb8_hu14027433483711653302.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb8_hu15918894288630353270.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb8_hu15553813195175815651.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb9_hu16352738512665877590.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb9_hu3851129393078558617.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb9_hu16944303847126013294.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb9_hu11242035660570284486.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb9_hu3851129393078558617.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;&lt;/p&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;2.5  创建草图 
+    &lt;div id=&#34;25--%E5%88%9B%E5%BB%BA%E8%8D%89%E5%9B%BE&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#25--%E5%88%9B%E5%BB%BA%E8%8D%89%E5%9B%BE&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;右键特征下的XY→创建草图，弹出草图编辑框。&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb10_hu12910896789009890179.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb10_hu5102072609025838370.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb10_hu14946685228274451139.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb10_hu2332714785502786316.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb10_hu5102072609025838370.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+&lt;p&gt;在左侧显示选项中点击如图所示红方框按钮设置网格间距为0.02m。点击确定。&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb11_hu8646919411138150090.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb11_hu16039732120913941547.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb11_hu6693981773872139925.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb11_hu3079972873925529787.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb11_hu16039732120913941547.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+&lt;p&gt;在左侧创建草图实体中点击如图所示红方框矩形创建工具，按图示所示尺寸创建完成。点击确定。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb12_hu7516288210371600841.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb12_hu2854932815928565154.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb12_hu10038656319188275353.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb12_hu15196714398925230110.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb12_hu2854932815928565154.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb13_hu9914263170766302211.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb13_hu12706794926612827846.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb13_hu15593363493248117924.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb13_hu14771834424904072936.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb13_hu12706794926612827846.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;&lt;/p&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;2.6  草图拉伸 
+    &lt;div id=&#34;26--%E8%8D%89%E5%9B%BE%E6%8B%89%E4%BC%B8&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#26--%E8%8D%89%E5%9B%BE%E6%8B%89%E4%BC%B8&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;在左侧特征下的右击草图Sketch 1，点击创建拉伸。然后在拉伸编辑框内进行设置：距离：-0.06m，体互动：无。点击确定生成Body 2。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb14_hu2336331066166347924.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb14_hu3303550335496766136.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb14_hu718686854181350359.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb14_hu3408492333843813574.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb14_hu3303550335496766136.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb15_hu1558505188590403938.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb15_hu10871627567178827443.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb15_hu17673379684098179122.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb15_hu7516028971050025361.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb15_hu10871627567178827443.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;&lt;/p&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;2.7  布尔运算 
+    &lt;div id=&#34;27--%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#27--%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;在体下方按住ctrl依次点击Body 2，Body 1，右键选择布尔运算→减运算。弹出体的减运算编辑框。确定两个体顺序无误点击确定。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb16_hu15086109003523174129.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb16_hu4367313805900538588.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb16_hu15622201645161345377.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb16_hu5150804324371481651.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb16_hu4367313805900538588.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb17_hu3301220663210834842.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb17_hu3920681427966023461.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb17_hu11665160855188333098.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb17_hu9038028400100493174.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb17_hu3920681427966023461.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb18_hu17703846631857850262.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb18_hu10536169950025252006.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb18_hu14458387895959648958.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb18_hu12260221616032992523.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb18_hu10536169950025252006.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;&lt;/p&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;2.8  回滚与隐藏 
+    &lt;div id=&#34;28--%E5%9B%9E%E6%BB%9A%E4%B8%8E%E9%9A%90%E8%97%8F&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#28--%E5%9B%9E%E6%BB%9A%E4%B8%8E%E9%9A%90%E8%97%8F&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;7. 定义面的名称，顺带介绍一下如何回滚步骤与隐藏体。如图右键SubtractBodies 1，点击回滚，回到创建前。&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb19_hu6025825605970893522.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb19_hu6724114679597168980.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb19_hu7364853907571460382.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb19_hu12259479003493088441.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb19_hu6724114679597168980.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+&lt;p&gt;右键Body 2，点击隐藏。&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb20_hu18431150913761943645.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb20_hu3894592665289415250.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb20_hu15367787042837347148.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb20_hu15122560970597728494.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb20_hu3894592665289415250.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+&lt;p&gt;点击右上角工具栏的框线选择，框中整个弹体直至弹体全部变为红色。右键，在4面那一大项中选择重命名。重命名为body_wall，点击OK。&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb21_hu825674034447673705.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb21_hu10007712413899641039.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb21_hu5095572247658135778.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb21_hu3954138781354281452.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb21_hu10007712413899641039.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+&lt;p&gt;在SubtractBodies 1处右键点击前滚，然后在Body 2处右键点击显示。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb22_hu14813743112431837133.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb22_hu6417189341209849384.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb22_hu8480349590581566801.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb22_hu3293442785786662345.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb22_hu6417189341209849384.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb23_hu14013559212515998632.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb23_hu9198120620335490860.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb23_hu8839195656758519455.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb23_hu10961113350539577888.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb23_hu9198120620335490860.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;&lt;/p&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;2.9  面的命名 
+    &lt;div id=&#34;29--%E9%9D%A2%E7%9A%84%E5%91%BD%E5%90%8D&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#29--%E9%9D%A2%E7%9A%84%E5%91%BD%E5%90%8D&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;将弹体所在对称面命名为sym_overset，其余5个面命名为boundaries。&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb24_hu5987613090749129831.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb24_hu2946691848515808523.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb24_hu10255770427809089310.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb24_hu10608468463678462562.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb24_hu2946691848515808523.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+&lt;p&gt;将左侧树状图中的3D—CAD model 1和Body 2重命名为overset，命名完的面可以在左侧的树状图中的已命名面下方看到。&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb25_hu15098085362814707382.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb25_hu6465805992785296835.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb25_hu6620048364619903497.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb25_hu16530332941897052889.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb25_hu6465805992785296835.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;3. 保存算例 
+    &lt;div id=&#34;3-%E4%BF%9D%E5%AD%98%E7%AE%97%E4%BE%8B&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#3-%E4%BF%9D%E5%AD%98%E7%AE%97%E4%BE%8B&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;点击下方的更新3D-CAD，并关闭。点击左上角：文件→保存（另存为）至合适位置，将模拟文件命名为example.sim。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb26_hu15339260337927093140.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb26_hu3116135942118600117.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb26_hu9359147752216699223.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb26_hu2523501889132727573.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb26_hu3116135942118600117.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;
+
+&lt;figure&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb27_hu9541932185112811115.png 330w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb27_hu9077061970925120631.png 660w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb27_hu9895154671504863236.png 1024w,
+          /blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb27_hu1166681964773274670.png 2x&#34;
+          src=&#34;https://zbianc.github.io/blogs/star-ccm&amp;#43;/ccmblog1/ccm1/ccmb27_hu9077061970925120631.png&#34;
+          alt=&#34;&#34;
+        /&gt;
+  
+  
+  &lt;/figure&gt;&lt;/p&gt;
+</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://zbianc.github.io/blogs/star-ccm&#43;/ccmblog1/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>

@@ -6,14 +6,34 @@
     <description></description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>© 2024 </copyright>
-    <lastBuildDate>Mon, 21 Oct 2024 19:42:12 +0800</lastBuildDate><atom:link href="https://zbianc.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 </copyright>
+    <lastBuildDate>Sun, 05 Jan 2025 14:25:04 +0800</lastBuildDate><atom:link href="https://zbianc.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>部署教程</title>
-      <link>https://zbianc.github.io/series/%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</link>
+      <title>【STAR-CCM&#43;】入水</title>
+      <link>https://zbianc.github.io/series/star-ccm&#43;%E5%85%A5%E6%B0%B4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zbianc.github.io/series/%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://zbianc.github.io/series/star-ccm&#43;%E5%85%A5%E6%B0%B4/</guid>
+      <description>由于RSS阅读器无法完美地展示博客内容，建议到浏览器阅读。<br/></description>
+      
+    </item>
+    
+    <item>
+      <title>HEXPRESS</title>
+      <link>https://zbianc.github.io/series/hexpress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zbianc.github.io/series/hexpress/</guid>
+      <description>由于RSS阅读器无法完美地展示博客内容，建议到浏览器阅读。<br/></description>
+      
+    </item>
+    
+    <item>
+      <title>Markdown技巧</title>
+      <link>https://zbianc.github.io/series/markdown%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zbianc.github.io/series/markdown%E6%8A%80%E5%B7%A7/</guid>
       <description>由于RSS阅读器无法完美地展示博客内容，建议到浏览器阅读。<br/></description>
       
     </item>
